@@ -12,6 +12,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -28,6 +29,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.SeekBar;
 import android.widget.Toast;
 
 import com.opencv.camera.CameraConfig;
@@ -43,12 +45,20 @@ public class CVCamera extends Activity {
 
 	static final int DIALOG_CALIBRATING = 0;
 	static final int DIALOG_CALIBRATION_FILE = 1;
+    static final int DIALOG_PICK_COLOR = 2;
+    static final int DIALOG_SET_LINE_WIDTH = 3;
 	private static final int DIALOG_OPENING_TUTORIAL = 2;
 	private static final int DIALOG_TUTORIAL_FAST = 3;
 	private static final int DIALOG_TUTORIAL_SURF = 4;
 	private static final int DIALOG_TUTORIAL_STAR = 5;
 	private static final int DIALOG_TUTORIAL_CHESS = 6;
+	private static final int DRAWING_STROKE = 0;
+	private static final int DRAWING_IMAGE = 1;
 	private boolean captureChess;
+
+    private CanvasOverlayView mCanvasView;
+    private DrawableOverlayView mDrawableView;
+    private int mDrawingMode;
 
 	ProgressDialog makeCalibDialog() {
 		ProgressDialog progressDialog;
@@ -102,6 +112,12 @@ public class CVCamera extends Activity {
 		case DIALOG_CALIBRATION_FILE:
 			dialog = makeCalibFileAlert();
 			break;
+        case DIALOG_PICK_COLOR:
+            dialog = makeColorPickerDialog();
+            break;
+        case DIALOG_SET_LINE_WIDTH:
+            dialog = makeStrokeDialog();
+            break;
 		default:
 			dialog = null;
 		}
@@ -311,7 +327,72 @@ public class CVCamera extends Activity {
 		});
 		buttons.addView(focus_button);
 
-		frame.addView(buttons);
+        Button colorPick_button = new Button(getApplicationContext());
+        colorPick_button.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT));
+        colorPick_button.setText("Stroke Color");
+        colorPick_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog(DIALOG_PICK_COLOR);
+            }
+        });
+        buttons.addView(colorPick_button);
+        
+        Button lineWidth_button = new Button(getApplicationContext());
+        lineWidth_button.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT));
+        lineWidth_button.setText("Stroke Width");
+        lineWidth_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog(DIALOG_SET_LINE_WIDTH);
+            }
+        });
+        buttons.addView(lineWidth_button);
+        
+        ImageButton mode_button = new ImageButton(getApplicationContext());
+        mode_button.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT));
+        mode_button.setImageResource(android.R.drawable.ic_menu_edit);
+        mode_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ImageButton button = (ImageButton)v;
+                switch (mDrawingMode) {
+                    case DRAWING_STROKE:
+                        button.setImageResource(android.R.drawable.ic_menu_gallery);
+                        mCanvasView.setEventCaptureEnable(false);
+                        mDrawableView.setEventCaptureEnable(true);
+                        mDrawingMode = DRAWING_IMAGE;
+                        break;
+                    case DRAWING_IMAGE:
+                        button.setImageResource(android.R.drawable.ic_menu_edit);
+                        mCanvasView.setEventCaptureEnable(true);
+                        mDrawableView.setEventCaptureEnable(false);
+                        mDrawingMode = DRAWING_STROKE;
+                        break;
+                    default:
+                }
+            }
+        });
+        buttons.addView(mode_button);
+        
+        mCanvasView = new CanvasOverlayView(this);
+        mCanvasView.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,
+                LayoutParams.FILL_PARENT));                
+        frame.addView(mCanvasView);
+        
+        mDrawableView = new DrawableOverlayView(this);
+        mDrawableView.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,
+                LayoutParams.FILL_PARENT));
+        frame.addView(mDrawableView);
+        
+        mCanvasView.setEventCaptureEnable(true);
+        mDrawableView.setEventCaptureEnable(false);
+        mDrawingMode = DRAWING_STROKE;
+
+        frame.addView(buttons);
 		setContentView(frame);
 		toasts(DIALOG_OPENING_TUTORIAL);
 	}
@@ -502,4 +583,27 @@ public class CVCamera extends Activity {
 
 	}
 
+    private Dialog makeColorPickerDialog() {
+        return new ColorPickerDialog(this, mCanvasView.getOnColorChangedListener(), Color.BLACK);
+    }
+    
+    private Dialog makeStrokeDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        SeekBar seekBar = new SeekBar(this);
+        seekBar.setMax(50);
+        builder.setView(seekBar);
+        builder.setPositiveButton("Ok", new StrokeDialogOnClickListener(seekBar));
+        return builder.create();
+    }
+    
+    private class StrokeDialogOnClickListener implements DialogInterface.OnClickListener {
+        private SeekBar mSeekBar;
+        protected StrokeDialogOnClickListener(SeekBar sb) {
+            mSeekBar = sb;
+        }
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            mCanvasView.setLineWidth(mSeekBar.getProgress());
+        }
+    }
 }
