@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/opencv/!svn/ver/4859/trunk/opencv/android/apps/CVCamera
+END
+default.properties
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/opencv/!svn/ver/4859/trunk/opencv/android/apps/CVCamera/default.properties
+END
+project_create.sh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/opencv/!svn/ver/3724/trunk/opencv/android/apps/CVCamera/project_create.sh
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/opencv/!svn/ver/4075/trunk/opencv/android/apps/CVCamera/AndroidManifest.xml
+END
+uninstall.phone.sh
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/opencv/!svn/ver/3724/trunk/opencv/android/apps/CVCamera/uninstall.phone.sh
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/opencv/!svn/ver/3724/trunk/opencv/android/apps/CVCamera/README.txt
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/opencv/!svn/ver/4859/trunk/opencv/android/apps/CVCamera/CMakeLists.txt
+END

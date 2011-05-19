@@ -1,0 +1,1 @@
+/Library/opencv/android/apps/CVCamera/build/jni/CMakeFiles/cvcamera.dir

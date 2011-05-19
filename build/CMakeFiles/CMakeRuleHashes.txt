@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+c99865d26b6ecf4bce7cd91f73dead1f jni/cvcameraJAVA_wrap.cxx

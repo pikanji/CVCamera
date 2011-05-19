@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/opencv/!svn/ver/4859/trunk/opencv/android/apps/CVCamera/jni
+END
+Processor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/opencv/!svn/ver/4075/trunk/opencv/android/apps/CVCamera/jni/Processor.cpp
+END
+Processor.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/opencv/!svn/ver/4075/trunk/opencv/android/apps/CVCamera/jni/Processor.h
+END
+Processor.i
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/opencv/!svn/ver/3724/trunk/opencv/android/apps/CVCamera/jni/Processor.i
+END
+cvcamera.i
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/opencv/!svn/ver/3724/trunk/opencv/android/apps/CVCamera/jni/cvcamera.i
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/opencv/!svn/ver/4859/trunk/opencv/android/apps/CVCamera/jni/CMakeLists.txt
+END

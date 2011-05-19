@@ -1,0 +1,127 @@
+The target system is: Linux - 1 - 
+The host system is: Darwin - 10.7.0 - i386
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc 
+Build flags: --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/;-fPIC;-DANDROID;-Wno-psabi;-fsigned-char;-mthumb;-march=armv7-a;-mfloat-abi=softfp
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/Library/opencv/android/apps/CVCamera/build/CMakeFiles/CompilerIdC/a.out"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc 
+Build flags: --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/;-fPIC;-DANDROID;-Wno-psabi;-fsigned-char;-mthumb;-march=armv7-a;-mfloat-abi=softfp
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/Library/opencv/android/apps/CVCamera/build/CMakeFiles/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-g++ 
+Build flags: --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/;-fPIC;-DANDROID;-Wno-psabi;-fsigned-char;-mthumb;-march=armv7-a;-mfloat-abi=softfp
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/Library/opencv/android/apps/CVCamera/build/CMakeFiles/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /Library/opencv/android/apps/CVCamera/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+/opt/local/bin/cmake -E cmake_progress_report /Library/opencv/android/apps/CVCamera/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/testCCompiler.c.o
+/Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc   --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/ -fPIC -DANDROID -Wno-psabi -fsigned-char -mthumb -march=armv7-a -mfloat-abi=softfp   -I/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include -I/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/libs/armeabi-v7a/include   -o CMakeFiles/cmTryCompileExec.dir/testCCompiler.c.o   -c /Library/opencv/android/apps/CVCamera/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
+/Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc   --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/ -fPIC -DANDROID -Wno-psabi -fsigned-char -mthumb -march=armv7-a -mfloat-abi=softfp    -Wl,--no-undefined -Wl,--fix-cortex-a8 -L/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/libs/armeabi-v7a -lstdc++ -lsupc++  CMakeFiles/cmTryCompileExec.dir/testCCompiler.c.o  -o cmTryCompileExec -rdynamic 
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Library/opencv/android/apps/CVCamera/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+/opt/local/bin/cmake -E cmake_progress_report /Library/opencv/android/apps/CVCamera/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o
+/Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc   --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/ -fPIC -DANDROID -Wno-psabi -fsigned-char -mthumb -march=armv7-a -mfloat-abi=softfp   -I/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include -I/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/libs/armeabi-v7a/include   -o CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o   -c /opt/local/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
+/Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc   --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/ -fPIC -DANDROID -Wno-psabi -fsigned-char -mthumb -march=armv7-a -mfloat-abi=softfp    -Wl,--no-undefined -Wl,--fix-cortex-a8 -L/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/libs/armeabi-v7a -lstdc++ -lsupc++  CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec -rdynamic  
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-linux-androideabi-ld|ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Library/opencv/android/apps/CVCamera/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build]
+  ignore line: [/opt/local/bin/cmake -E cmake_progress_report /Library/opencv/android/apps/CVCamera/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc   --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/ -fPIC -DANDROID -Wno-psabi -fsigned-char -mthumb -march=armv7-a -mfloat-abi=softfp   -I/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include -I/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/libs/armeabi-v7a/include   -o CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o   -c /opt/local/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec]
+  ignore line: [/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1]
+  ignore line: [/Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gcc   --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/ -fPIC -DANDROID -Wno-psabi -fsigned-char -mthumb -march=armv7-a -mfloat-abi=softfp    -Wl,--no-undefined -Wl,--fix-cortex-a8 -L/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/libs/armeabi-v7a -lstdc++ -lsupc++  CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec -rdynamic  ]
+  ignore line: []
+  implicit libs: []
+  implicit dirs: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /Library/opencv/android/apps/CVCamera/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+/opt/local/bin/cmake -E cmake_progress_report /Library/opencv/android/apps/CVCamera/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec.dir/testCXXCompiler.cxx.o
+/Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-g++    --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/ -fPIC -DANDROID -Wno-psabi -fsigned-char -mthumb -march=armv7-a -mfloat-abi=softfp   -I/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include -I/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/libs/armeabi-v7a/include   -o CMakeFiles/cmTryCompileExec.dir/testCXXCompiler.cxx.o -c /Library/opencv/android/apps/CVCamera/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
+/Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-g++    --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/ -fPIC -DANDROID -Wno-psabi -fsigned-char -mthumb -march=armv7-a -mfloat-abi=softfp    -Wl,--no-undefined -Wl,--fix-cortex-a8 -L/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/libs/armeabi-v7a -lstdc++ -lsupc++  CMakeFiles/cmTryCompileExec.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec -rdynamic 
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /Library/opencv/android/apps/CVCamera/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+/opt/local/bin/cmake -E cmake_progress_report /Library/opencv/android/apps/CVCamera/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o
+/Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-g++    --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/ -fPIC -DANDROID -Wno-psabi -fsigned-char -mthumb -march=armv7-a -mfloat-abi=softfp   -I/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include -I/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/libs/armeabi-v7a/include   -o CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -c /opt/local/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
+/Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-g++    --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/ -fPIC -DANDROID -Wno-psabi -fsigned-char -mthumb -march=armv7-a -mfloat-abi=softfp    -Wl,--no-undefined -Wl,--fix-cortex-a8 -L/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/libs/armeabi-v7a -lstdc++ -lsupc++  CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec -rdynamic  
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-linux-androideabi-ld|ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Library/opencv/android/apps/CVCamera/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build]
+  ignore line: [/opt/local/bin/cmake -E cmake_progress_report /Library/opencv/android/apps/CVCamera/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-g++    --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/ -fPIC -DANDROID -Wno-psabi -fsigned-char -mthumb -march=armv7-a -mfloat-abi=softfp   -I/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include -I/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/libs/armeabi-v7a/include   -o CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -c /opt/local/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec]
+  ignore line: [/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1]
+  ignore line: [/Library/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-g++    --sysroot=/Library/android-ndk-r5b/platforms/android-8/arch-arm/ -fPIC -DANDROID -Wno-psabi -fsigned-char -mthumb -march=armv7-a -mfloat-abi=softfp    -Wl,--no-undefined -Wl,--fix-cortex-a8 -L/Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/libs/armeabi-v7a -lstdc++ -lsupc++  CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec -rdynamic  ]
+  ignore line: []
+  implicit libs: []
+  implicit dirs: []
+
+
