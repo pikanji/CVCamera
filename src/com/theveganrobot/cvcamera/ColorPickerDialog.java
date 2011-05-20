@@ -1,4 +1,7 @@
-
+/**
+ * Copied from yanzm's blog. Thank you, yanzm.
+ * http://y-anz-m.blogspot.com/2010/05/androidcolorpickerdialog.html
+ */
 package com.theveganrobot.cvcamera;
 
 import android.app.Dialog;

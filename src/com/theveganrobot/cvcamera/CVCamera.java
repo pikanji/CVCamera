@@ -377,6 +377,19 @@ public class CVCamera extends Activity {
             }
         });
         buttons.addView(mode_button);
+
+        Button clear_button = new Button(getApplicationContext());
+        clear_button.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT));
+        clear_button.setText("Clear");
+        clear_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCanvasView.clear();
+                mDrawableView.clear();
+            }
+        });
+        buttons.addView(clear_button);
         
         mCanvasView = new CanvasOverlayView(this);
         mCanvasView.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,
@@ -605,5 +618,10 @@ public class CVCamera extends Activity {
         public void onClick(DialogInterface dialog, int which) {
             mCanvasView.setLineWidth(mSeekBar.getProgress());
         }
+    }
+    
+    
+    public int getIntFromJni() {
+        return 10;
     }
 }

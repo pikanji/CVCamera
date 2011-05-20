@@ -112,4 +112,10 @@ class CanvasOverlayView extends View {
     protected void setLineWidth(int width) {
         mSelectedWidth = width;
     }
+    
+    public void clear() {
+        mCurrDrawing = null;
+        mDrawings = new ArrayList<Drawing>();
+        invalidate();
+    }
 }
