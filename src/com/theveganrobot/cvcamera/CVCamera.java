@@ -15,6 +15,7 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -59,6 +60,7 @@ public class CVCamera extends Activity {
     private CanvasOverlayView mCanvasView;
     private DrawableOverlayView mDrawableView;
     private int mDrawingMode;
+    private Handler mHandler;
 
 	ProgressDialog makeCalibDialog() {
 		ProgressDialog progressDialog;
@@ -390,6 +392,41 @@ public class CVCamera extends Activity {
             }
         });
         buttons.addView(clear_button);
+
+        mHandler = new Handler();
+        
+        Button tracking_button = new Button(getApplicationContext());
+        tracking_button.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT));
+        tracking_button.setText("Track");
+        tracking_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!mTracking) {
+                    mTracking = true;
+                    mCanvasView.setEventCaptureEnable(false);
+                    mDrawableView.setEventCaptureEnable(false);
+                    Runnable r = new UiUpdater(mDrawableView, mCanvasView, 2, 2);
+                    mHandler.postDelayed(r, 33);
+                    //mHandler.postDelayed(r, 1000);
+                    //runOnUiThread(new UiUpdater(mDrawableView, mCanvasView, 0, 0));
+                } else {
+                    switch (mDrawingMode) {
+                        case DRAWING_IMAGE:
+                            mCanvasView.setEventCaptureEnable(false);
+                            mDrawableView.setEventCaptureEnable(true);
+                            break;
+                        case DRAWING_STROKE:
+                            mCanvasView.setEventCaptureEnable(true);
+                            mDrawableView.setEventCaptureEnable(false);
+                            break;
+                        default:
+                    }
+                    mTracking = false;
+                }
+            }
+        });
+        buttons.addView(tracking_button);
         
         mCanvasView = new CanvasOverlayView(this);
         mCanvasView.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,
@@ -620,8 +657,39 @@ public class CVCamera extends Activity {
         }
     }
     
+    private boolean mTracking;
     
-    public int getIntFromJni() {
-        return 10;
+    private class UiUpdater implements Runnable {
+        DrawableOverlayView mDv;
+        CanvasOverlayView mCv;
+        int mX, mY;
+        
+        public UiUpdater(DrawableOverlayView dv, CanvasOverlayView cv, int x, int y) {
+            mDv = dv;
+            mCv = cv;
+            mX = x;
+            mY = y;
+        }
+        
+        @Override
+        public void run() {
+            if (!mTracking) {
+                return;
+            }
+            mDv.movePoints(mX, mY);
+            mCv.movePoints(mX, mY);
+            mDv.invalidate();
+            mCv.invalidate();
+            
+            // Get next x and y
+            
+            // Next task
+            Runnable r = new UiUpdater(mDrawableView, mCanvasView, 2, 2);
+            mHandler.postDelayed(r, 33);
+            //mHandler.postDelayed(r, 1000);
+            //runOnUiThread(new UiUpdater(mDv, mCv, 0, 0));
+        }
+        
+        
     }
 }

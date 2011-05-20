@@ -95,7 +95,15 @@ class CanvasOverlayView extends View {
             mPoints = new ArrayList<Point>();
             mPoints.add(point);
         }
+        
+        protected void movePoints(int x, int y) {
+            for (Point p : mPoints) {
+                p.mX += x;
+                p.mY += y;
+            }
+        }
     }
+    
 
     private int mSelectedColor = 0xFFFFFFFF;
 
@@ -117,5 +125,11 @@ class CanvasOverlayView extends View {
         mCurrDrawing = null;
         mDrawings = new ArrayList<Drawing>();
         invalidate();
+    }
+    
+    public void movePoints(int x, int y) {
+        for (Drawing d : mDrawings) {
+            d.movePoints(x, y);
+        }
     }
 }

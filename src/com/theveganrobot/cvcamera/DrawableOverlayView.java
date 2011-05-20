@@ -65,10 +65,18 @@ class DrawableOverlayView extends View {
         return true;
     }
     
+    
     public void clear() {
         mCurrPoint = null;
         mPoints = new ArrayList<Point>();
         invalidate();
+    }
+    
+    public void movePoints(int x, int y) {
+        for (Point p : mPoints) {
+            p.mX += x;
+            p.mY += y;
+        }
     }
 
     private class Point {
