@@ -64,4 +64,12 @@ public class Processor {
     cvcameraJNI.Processor_drawText(swigCPtr, this, idx, image_pool.getCPtr(pool), pool, text);
   }
 
+  public int getCenterXvec() {
+    return cvcameraJNI.Processor_getCenterXvec(swigCPtr, this);
+  }
+
+  public int getCenterYvec() {
+    return cvcameraJNI.Processor_getCenterYvec(swigCPtr, this);
+  }
+
 }

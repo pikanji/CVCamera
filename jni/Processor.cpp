@@ -8,14 +8,15 @@
 #include "Processor.h"
 
 #include <sys/stat.h>
+#include <cv.h>
 
 using namespace cv;
 
 Processor::Processor() :
       stard(20/*max_size*/, 8/*response_threshold*/, 15/*line_threshold_projected*/, 8/*line_threshold_binarized*/, 5/*suppress_nonmax_size*/),
       fastd(20/*threshold*/, true/*nonmax_suppression*/),
-      surfd(100./*hessian_threshold*/, 1/*octaves*/, 2/*octave_layers*/)
-
+      surfd(100./*hessian_threshold*/, 1/*octaves*/, 2/*octave_layers*/),
+      centerVector(0.0f, 0.0f)
 {
 
 }
@@ -27,6 +28,7 @@ Processor::~Processor()
 
 void Processor::detectAndDrawFeatures(int input_idx, image_pool* pool, int feature_type)
 {
+/*
   FeatureDetector* fd = 0;
 
   switch (feature_type)
@@ -64,8 +66,84 @@ void Processor::detectAndDrawFeatures(int input_idx, image_pool* pool, int featu
   }
 
   //pool->addImage(output_idx,outimage);
+*/
+	static int prev_feature_type = -1;
+	static bool needinit = true;
+	static Mat prev;
+	static vector<Point2f> points1, points2;
+	vector<uchar> status;
+	vector<float> err;
+	vector<uchar> global_status(200,1), snapshot_global_status(200);
 
+	Mat gray = pool->getGrey(input_idx);
+	Mat img = pool->getImage(input_idx);
+
+	if (img.empty() || gray.empty())
+		return; //no image at input_idx!
+
+	if (prev_feature_type != feature_type) {
+		needinit = true;
+	}
+	prev_feature_type = feature_type;
+
+
+	if (feature_type != DETECT_SURF) {
+		if (needinit) {
+			needinit = false;
+			Size s =  gray.size();
+			points1.clear();
+			const int div = 5;
+			for (int w = 0; w < div; ++w) {
+				for (int h = 0; h < div; ++h) {
+					float ww = (s.width / div) * w + ((s.width/div)/2);
+					float hh = (s.height / div) * h + ((s.height/div)/2);
+					points1.push_back(Point2f(ww, hh));
+				}
+			}
+			points2.clear();
+		} else {
+			calcOpticalFlowPyrLK(prev, gray, points1, points2, status, err);
+			for (unsigned int i=0; i < points2.size(); i++) {
+				//compact points
+				if (status[i]) {
+					if (i == (points2.size()/2)) {
+						line(img, points2[i], points1[i], cvScalar(255, 0, 0, 0));
+						centerVector = points2[i] - points1[i];
+					} else {
+						line(img, points2[i], points1[i], cvScalar(0, 0, 255, 0));
+					}
+				}
+			}
+		}
+	} else {
+		if (needinit) {
+			needinit = false;
+			goodFeaturesToTrack(gray, points1, 40, 0.01f, 2.0);
+			points2.clear();
+		} else {
+			calcOpticalFlowPyrLK(prev, gray, points1, points2, status, err);
+			for (unsigned int i=0; i < points2.size(); i++) {
+				//compact points
+				if (status[i]) {
+					line(img, points2[i], points1[i], cvScalar(0, 255, 0, 0));
+					circle(img, points1[i], 3, cvScalar(0, 0, 255, 0));
+					circle(img, points2[i], 3, cvScalar(255, 0, 0, 0));
+				}
+			}
+			goodFeaturesToTrack(gray, points1, 40, 0.01f, 2.0);
+		}
+	}
+	gray.copyTo(prev);
 }
+
+int Processor::getCenterXvec() {
+	return static_cast<int>(centerVector.x);
+}
+int Processor::getCenterYvec() {
+	return static_cast<int>(centerVector.y);
+}
+
+
 static double computeReprojectionErrors(const vector<vector<Point3f> >& objectPoints,
                                         const vector<vector<Point2f> >& imagePoints, const vector<Mat>& rvecs,
                                         const vector<Mat>& tvecs, const Mat& cameraMatrix, const Mat& distCoeffs,

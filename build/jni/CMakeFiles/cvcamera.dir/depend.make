@@ -14,6 +14,7 @@ jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cx
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/cmath.tcc
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/concept_check.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/cpp_type_traits.h
+jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/deque.tcc
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/functexcept.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/ios_base.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/istream.tcc
@@ -31,6 +32,7 @@ jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cx
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/stl_algobase.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/stl_bvector.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/stl_construct.h
+jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/stl_deque.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/stl_function.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/stl_heap.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/stl_iterator.h
@@ -64,6 +66,7 @@ jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cx
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/cwctype
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/cxxabi-forced.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/debug.h
+jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/deque
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/formatter.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/functions.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/macros.h
@@ -75,6 +78,7 @@ jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cx
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/safe_iterator.tcc
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/safe_sequence.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/vector
+jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/deque
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/exception
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/exception_defines.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/exception_ptr.h
@@ -126,9 +130,13 @@ jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/android-ndk-r5b/sources/cx
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/android/android-opencv/jni/include/image_pool.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: ../jni/Processor.cpp
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: ../jni/Processor.h
+jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/include/opencv/cv.h
+jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/include/opencv/cxcore.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/calib3d/include/opencv2/calib3d/calib3d.hpp
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/core/include/opencv2/core/core.hpp
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/core/include/opencv2/core/core_c.h
+jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/core/include/opencv2/core/eigen.hpp
+jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/core/include/opencv2/core/internal.hpp
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/core/include/opencv2/core/mat.hpp
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/core/include/opencv2/core/operations.hpp
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/core/include/opencv2/core/types_c.h
@@ -160,7 +168,11 @@ jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/flann/inclu
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/highgui/include/opencv2/highgui/highgui.hpp
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/highgui/include/opencv2/highgui/highgui_c.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/imgproc/include/opencv2/imgproc/imgproc.hpp
+jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/imgproc/include/opencv2/imgproc/imgproc_c.h
 jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/imgproc/include/opencv2/imgproc/types_c.h
+jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/legacy/include/opencv2/legacy/compat.hpp
+jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/objdetect/include/opencv2/objdetect/objdetect.hpp
+jni/CMakeFiles/cvcamera.dir/Processor.cpp.o: /Library/opencv/modules/video/include/opencv2/video/tracking.hpp
 
 jni/CMakeFiles/cvcamera.dir/cvcameraJAVA_wrap.cxx.o: ../jni/Processor.h
 jni/CMakeFiles/cvcamera.dir/cvcameraJAVA_wrap.cxx.o: /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/algorithm

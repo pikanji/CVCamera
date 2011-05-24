@@ -406,7 +406,10 @@ public class CVCamera extends Activity {
                     mTracking = true;
                     mCanvasView.setEventCaptureEnable(false);
                     mDrawableView.setEventCaptureEnable(false);
-                    Runnable r = new UiUpdater(mDrawableView, mCanvasView, 2, 2);
+
+                    int x = processor.getCenterXvec();
+                    int y = processor.getCenterYvec();
+                    Runnable r = new UiUpdater(mDrawableView, mCanvasView, x>>1, y>>1);
                     mHandler.postDelayed(r, 33);
                     //mHandler.postDelayed(r, 1000);
                     //runOnUiThread(new UiUpdater(mDrawableView, mCanvasView, 0, 0));
@@ -682,9 +685,11 @@ public class CVCamera extends Activity {
             mCv.invalidate();
             
             // Get next x and y
+            int x = processor.getCenterXvec();
+            int y = processor.getCenterYvec();
             
             // Next task
-            Runnable r = new UiUpdater(mDrawableView, mCanvasView, 2, 2);
+            Runnable r = new UiUpdater(mDrawableView, mCanvasView, x>>1, y>>1);
             mHandler.postDelayed(r, 33);
             //mHandler.postDelayed(r, 1000);
             //runOnUiThread(new UiUpdater(mDv, mCv, 0, 0));

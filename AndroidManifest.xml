@@ -3,6 +3,7 @@
 	package="com.theveganrobot.cvcamera" android:versionCode="7" android:versionName="7.0"
 	>
 	<application android:debuggable="false" android:icon="@drawable/icon">
+	   <!-- android:hardwareAccelerated="true"> --> 
 		<activity android:name=".CVCamera" android:screenOrientation="landscape"
 			android:configChanges="orientation|keyboardHidden|keyboard"
 			android:label="@string/app_name"

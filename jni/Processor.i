@@ -48,4 +48,7 @@ public:
 	
 	void drawText(int idx, image_pool* pool, const char* text);
 
+	int getCenterXvec();
+	
+	int getCenterYvec();
 };

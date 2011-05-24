@@ -15,6 +15,7 @@ jni/CMakeFiles/cvcamera.dir/Processor.cpp.o
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/cmath.tcc
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/concept_check.h
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/cpp_type_traits.h
+ /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/deque.tcc
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/functexcept.h
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/ios_base.h
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/istream.tcc
@@ -32,6 +33,7 @@ jni/CMakeFiles/cvcamera.dir/Processor.cpp.o
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/stl_algobase.h
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/stl_bvector.h
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/stl_construct.h
+ /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/stl_deque.h
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/stl_function.h
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/stl_heap.h
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/bits/stl_iterator.h
@@ -65,6 +67,7 @@ jni/CMakeFiles/cvcamera.dir/Processor.cpp.o
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/cwctype
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/cxxabi-forced.h
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/debug.h
+ /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/deque
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/formatter.h
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/functions.h
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/macros.h
@@ -76,6 +79,7 @@ jni/CMakeFiles/cvcamera.dir/Processor.cpp.o
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/safe_iterator.tcc
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/safe_sequence.h
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/debug/vector
+ /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/deque
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/exception
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/exception_defines.h
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/exception_ptr.h
@@ -127,9 +131,13 @@ jni/CMakeFiles/cvcamera.dir/Processor.cpp.o
  /Library/opencv/android/android-opencv/jni/include/image_pool.h
  /Library/opencv/android/apps/CVCamera/jni/Processor.cpp
  /Library/opencv/android/apps/CVCamera/jni/Processor.h
+ /Library/opencv/include/opencv/cv.h
+ /Library/opencv/include/opencv/cxcore.h
  /Library/opencv/modules/calib3d/include/opencv2/calib3d/calib3d.hpp
  /Library/opencv/modules/core/include/opencv2/core/core.hpp
  /Library/opencv/modules/core/include/opencv2/core/core_c.h
+ /Library/opencv/modules/core/include/opencv2/core/eigen.hpp
+ /Library/opencv/modules/core/include/opencv2/core/internal.hpp
  /Library/opencv/modules/core/include/opencv2/core/mat.hpp
  /Library/opencv/modules/core/include/opencv2/core/operations.hpp
  /Library/opencv/modules/core/include/opencv2/core/types_c.h
@@ -161,7 +169,11 @@ jni/CMakeFiles/cvcamera.dir/Processor.cpp.o
  /Library/opencv/modules/highgui/include/opencv2/highgui/highgui.hpp
  /Library/opencv/modules/highgui/include/opencv2/highgui/highgui_c.h
  /Library/opencv/modules/imgproc/include/opencv2/imgproc/imgproc.hpp
+ /Library/opencv/modules/imgproc/include/opencv2/imgproc/imgproc_c.h
  /Library/opencv/modules/imgproc/include/opencv2/imgproc/types_c.h
+ /Library/opencv/modules/legacy/include/opencv2/legacy/compat.hpp
+ /Library/opencv/modules/objdetect/include/opencv2/objdetect/objdetect.hpp
+ /Library/opencv/modules/video/include/opencv2/video/tracking.hpp
 jni/CMakeFiles/cvcamera.dir/cvcameraJAVA_wrap.cxx.o
  ../jni/Processor.h
  /Library/android-ndk-r5b/sources/cxx-stl/gnu-libstdc++/include/algorithm

@@ -40,6 +40,10 @@ public:
   void calibrate(const char* filename);
 
   void drawText(int idx, image_pool* pool, const char* text);
+
+  int getCenterXvec();
+  int getCenterYvec();
+
 private:
   cv::StarFeatureDetector stard;
   cv::FastFeatureDetector fastd;
@@ -50,6 +54,8 @@ private:
   cv::Mat K;
   cv::Mat distortion;
   cv::Size imgsize;
+
+  cv::Point2f centerVector;
 
 };
 

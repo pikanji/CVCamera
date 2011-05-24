@@ -365,6 +365,36 @@ SWIGEXPORT void JNICALL Java_com_theveganrobot_cvcamera_jni_cvcameraJNI_Processo
 }
 
 
+SWIGEXPORT jint JNICALL Java_com_theveganrobot_cvcamera_jni_cvcameraJNI_Processor_1getCenterXvec(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  Processor *arg1 = (Processor *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Processor **)&jarg1; 
+  result = (int)(arg1)->getCenterXvec();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_com_theveganrobot_cvcamera_jni_cvcameraJNI_Processor_1getCenterYvec(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  Processor *arg1 = (Processor *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Processor **)&jarg1; 
+  result = (int)(arg1)->getCenterYvec();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
 #ifdef __cplusplus
 }
 #endif
